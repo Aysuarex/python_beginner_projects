@@ -1,5 +1,4 @@
 import random
-import time
 from words import word_list
 
 """
@@ -18,7 +17,7 @@ def play(word):
     lives = 6 #number of remaining trials which corresponds to the diagrams
 
     print("\nWelcome to Hangman")
-    print(diagram)
+    print(diagram(lives))
     print(word_completion)
     print("\n")
 
@@ -71,7 +70,7 @@ def play(word):
         # if the guess was neither a letter in the alphabet, 
         # nor a word with the appropriate length
         else: 
-            printf("Error! Invalid Guess. Try again")
+            print("Error! Invalid Guess. Try again")
         
         print(diagram(lives))
         print(word_completion)
@@ -80,7 +79,7 @@ def play(word):
     if guessed: #user guesses the word correctly
         print(f"Congrats! You guessed the word correctly with {lives} lives left. You Win!")
     else: #user runs out of lives but couldnt guess correctly
-        print("Sorry, you ran out of tries. The word was {word}. Maybe next time!")
+        print(f"Sorry, you ran out of tries. The word was {word}. Maybe next time!")
 
 
 def diagram(lives):
@@ -158,11 +157,11 @@ def diagram(lives):
     return stages[lives]
 
 def main():
-    get_word()
+    word = get_word()
     play(word)
 
-    while input("Do you wish to play again?(Y/N): ").upper() == 'Y'
-        get_word()
+    while input("\nDo you wish to play again?(Y/N): ").upper() == 'Y':
+        word = get_word()
         play(word)
     print("Bye! Come Back Soon.")
 
