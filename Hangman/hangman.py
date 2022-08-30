@@ -79,7 +79,7 @@ def hangman(word):
     if guessed: #user guesses the word correctly
         print(f"Congrats! You guessed the word correctly with {lives} lives left. You Win!")
     else: #user runs out of lives but couldnt guess correctly
-        print(f"Sorry, you ran out of tries. The word was {word}. Maybe next time!")
+        print(f"Sorry, you ran out of attempts. The word was {word}. Maybe next time!")
 
 
 def diagram(lives):
