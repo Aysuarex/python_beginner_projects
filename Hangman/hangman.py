@@ -17,7 +17,7 @@ def hangman(word):
     lives = 6 #number of remaining trials which corresponds to the diagrams
 
     print("\nWelcome to Hangman!")
-    print("\n\tQuickly. Save him!")
+    print("\n\tQuickly. Save him before he disappears!")
     print(diagram(6-lives))
     print(word_completion)
     print("\n")
@@ -165,7 +165,7 @@ def main():
     while input("\nDo you wish to play again?(Y/N): ").upper() == 'Y':
         word = get_word()
         hangman(word)
-    print("Bye! Come Back Soon.")
+    print("\nBye! Come Back Soon.\n")
 
 if __name__ == "__main__":
     main()
