@@ -9,7 +9,7 @@ def get_word():
     word= (random.choice(word_list)).upper()
     return word #.upper()
 
-def play(word):
+def hangman(word):
     word_completion = '_' * len(word) #prints the word as underscores (_____)
     guessed = False #Has the word been correctly guessed yet?
     guessed_letters = [] #letters that have been guessed
@@ -158,11 +158,11 @@ def diagram(lives):
 
 def main():
     word = get_word()
-    play(word)
+    hangman(word)
 
     while input("\nDo you wish to play again?(Y/N): ").upper() == 'Y':
         word = get_word()
-        play(word)
+        hangman(word)
     print("Bye! Come Back Soon.")
 
 if __name__ == "__main__":
