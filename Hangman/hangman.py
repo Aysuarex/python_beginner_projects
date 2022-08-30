@@ -10,14 +10,15 @@ def get_word():
     return word #.upper()
 
 def hangman(word):
-    word_completion = '_' * len(word) #prints the word as underscores (_____)
+    word_completion = '-' * len(word) #prints the word as dashes (-----)
     guessed = False #Has the word been correctly guessed yet?
     guessed_letters = [] #letters that have been guessed
     guessed_words = [] #words that have been guessed
     lives = 6 #number of remaining trials which corresponds to the diagrams
 
-    print("\nWelcome to Hangman")
-    print(diagram(lives))
+    print("\nWelcome to Hangman!")
+    print("\n\tQuickly. Save him!")
+    print(diagram(6-lives))
     print(word_completion)
     print("\n")
 
@@ -33,7 +34,7 @@ def hangman(word):
                 lives -= 1
                 guessed_letters.append(guess)
             else: # letter was guessed correctly
-                print("Good job! {guess} is in the word")
+                print(f"Good job! {guess} is in the word")
                 guessed_letters.append(guess)
                 
                 # convert the string to a list so we can index it and edit the contents
@@ -43,7 +44,7 @@ def hangman(word):
                 # in the word and make a list out of them
                 indices = [i for i,letter in enumerate(word) if letter == guess]
                 
-                # interating through the list and replacing the '_' in the original 
+                # interating through the list and replacing the '-' in the original 
                 # word_completion variable with the appropriate guessed letter
                 for index in indices:
                     word_as_list[index] = guess
@@ -52,7 +53,7 @@ def hangman(word):
                     word_completion = "".join(word_as_list)
 
                 # if the last correct guess completed the word
-                if '_' not in word_completion:
+                if '-' not in word_completion:
                     guessed = True
         
         # if the guess was a word having the right length
@@ -64,7 +65,7 @@ def hangman(word):
                 print(f"{guess} is not the word")
                 guessed_words.append(guess)
             else: # whole word was guessed correctly
-                guess = True
+                guessed = True
                 word_completion = word
 
         # if the guess was neither a letter in the alphabet, 
@@ -72,12 +73,13 @@ def hangman(word):
         else: 
             print("Error! Invalid Guess. Try again")
         
-        print(diagram(lives))
+        print(diagram(6-lives))
         print(word_completion)
+        print(f"You have {lives} attempts left and have used " + ', '.join(guessed_letters))
         print("\n")
     
     if guessed: #user guesses the word correctly
-        print(f"Congrats! You guessed the word correctly with {lives} lives left. You Win!")
+        print("Congrats! You guessed the word correctly. You Win!")
     else: #user runs out of lives but couldnt guess correctly
         print(f"Sorry, you ran out of attempts. The word was {word}. Maybe next time!")
 
