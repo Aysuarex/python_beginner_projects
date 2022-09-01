@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-import random
-import time
-
-"""
-Binary search and normal naive search juxtaposition
-Binary search - O(log(n)), naive search - O(n)
-"""
-
-def naive_search(a_list, target):
-    for i in range(len(a_list)):
-        if target in a_list:
-            if a_list[i] == target:
-                return i
-        print("Not Found")
-        
-        #print(target)
-        
-
-def binary_search(list, target):
-    
-
-
-if __name__ == "__main__":
-    a_list = [-3, 4, 8, 12, 17, 21, 29, 37]
-    value = 21
-
-    naive_search(a_list, value)
-=======
-"""
-Beginner Python Project - Binary Search Implementation by Kylie Ying
-
-YouTube Kylie Ying: https://www.youtube.com/ycubed 
-Twitch KylieYing: https://www.twitch.tv/kylieying 
-Twitter @kylieyying: https://twitter.com/kylieyying 
-Instagram @kylieyying: https://www.instagram.com/kylieyying/ 
-Website: https://www.kylieying.com
-Github: https://www.github.com/kying18 
-Programmer Beast Mode Spotify playlist: https://open.spotify.com/playlist/4Akns5EUb3gzmlXIdsJkPs?si=qGc4ubKRRYmPHAJAIrCxVQ 
-"""
-
 import random
 import time
 
@@ -118,4 +77,3 @@ if __name__=='__main__':
         binary_search(sorted_list, target)
     end = time.time()
     print("Binary search time: ", (end - start), "seconds")
->>>>>>> 109c5cd56541d417f8ebff58d4a1669fd3788bc0
