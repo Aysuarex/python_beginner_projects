@@ -1,10 +1,10 @@
 import random
 import time
 
-# Implementation of binary search algorithm!!
-
-# We will prove that binary search is faster than naive search!
-
+"""
+Implementation of binary search algorithm.
+We will prove that binary search is faster than naive search!
+"""
 
 # Essence of binary search:
 # If you have a sorted list and you want to search this array for something,
