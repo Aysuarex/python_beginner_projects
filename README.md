@@ -17,7 +17,7 @@ This is a collection of basic programming projects made with Python.
 5. [`Hangman`](./Hangman): A game of hangman where the user attempts to guess a
  randomly selected word from a wide list of words. There's a limited number of
  attempts to do that too.
-6. [`Minesweeper`](./minesweeper.py): The command-line version of a nostlalgic game
+6. [`Minesweeper`](./minesweeper.py): (⚒️⛑️ **Work In Progress**) The command-line version of a nostlalgic game
  involving mines, clues, arithmetic and explosions for you to enjoy on your terminal.
 
 ### Project By [Suara Ayomide](https://twitter.com/aysuarex)
