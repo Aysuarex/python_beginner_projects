@@ -20,4 +20,4 @@ This is a collection of basic programming projects made with Python.
 6. [`Minesweeper`](./minesweeper.py): (⚒️⛑️ **Work In Progress**) The command-line version of a nostlalgic game
  involving mines, clues, arithmetic and explosions for you to enjoy on your terminal.
 
-### Project By [Suara Ayomide](https://twitter.com/aysuarex)
+### Projects By [Suara Ayomide](https://twitter.com/aysuarex)
